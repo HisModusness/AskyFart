@@ -45,8 +45,6 @@ public class AskyFart {
         return characters[(int)Math.floor(brightness * ((characters.length-1) / 255.0))];
     }
     
-        /* REFACTORING FOR PERFORMANCE DOWN HERE */
-    
     public void convertImage(BufferedImage image) {
         for (int i = 0; i < image.getHeight(); i++) {
             for (int j = 0; j < image.getWidth(); j++) {
@@ -71,12 +69,9 @@ public class AskyFart {
             b * b * .068);
     }
     
-     /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         AskyFart af = new AskyFart();
-        // TODO present file chooser hmm hmm hmmery
+        
         String path = "C:/Users/Liam/Downloads/dog-groups-sporting-group0.jpg";
         BufferedImage theImage = af.getImage(path);
         af.convertImage(theImage);
